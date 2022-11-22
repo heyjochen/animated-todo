@@ -1,6 +1,15 @@
-import { Text, Box, Center } from 'native-base'
-
-export default function MainScreen() {
+import {
+  Text,
+  Box,
+  Center,
+  VStack,
+  themeTools,
+  useTheme,
+  useColorMode,
+  useColorModeValue
+} from 'native-base'
+import ThemeToggle from '../components/theme-toggle'
+export default function Main() {
   return (
     <Center
       _dark={{ bg: 'blueGray.900' }}
@@ -8,9 +17,12 @@ export default function MainScreen() {
       px={4}
       flex={1}
     >
-      <Box>
-        <Text>Hello</Text>
-      </Box>
+      <VStack space={5} alignItems="center">
+        <Box>
+          <Text>Hello</Text>
+        </Box>
+        <ThemeToggle />
+      </VStack>
     </Center>
   )
 }
