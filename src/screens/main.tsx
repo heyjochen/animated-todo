@@ -1,13 +1,4 @@
-import {
-  Text,
-  Box,
-  Center,
-  VStack,
-  themeTools,
-  useTheme,
-  useColorMode,
-  useColorModeValue
-} from 'native-base'
+import { Text, Box, Center, VStack, useColorModeValue } from 'native-base'
 import ThemeToggle from '../components/theme-toggle'
 export default function Main() {
   return (
@@ -18,7 +9,7 @@ export default function Main() {
       flex={1}
     >
       <VStack space={5} alignItems="center">
-        <Box>
+        <Box p={10} bg={useColorModeValue('red.500', 'yellow.500')}>
           <Text>Hello</Text>
         </Box>
         <ThemeToggle />
